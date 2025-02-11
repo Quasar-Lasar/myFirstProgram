@@ -28,7 +28,7 @@ def play():
 
 while True:
   os.system("clear")
-  print("play some DnB") 
+  print("🎵 MyPOD Music Player ")
   time.sleep(1)
   print("Press 1 to Play")
   print("Press 2 to Exit")
@@ -41,4 +41,3 @@ while True:
     exit()
   else:
     continue
-

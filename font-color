@@ -1,0 +1,20 @@
+def difColor(color, word):
+    if color == "red":
+        print("\033[31m" + word + "\033[0m",sep="",end="")
+    elif color == "purple":
+        print("\033[35m" + word + "\033[0m",sep="",end="")
+    elif color == "cyan":
+        print("\033[36m" + word + "\033[0m",sep="",end="")    
+    else:
+        print("Color not found")
+
+print("super subroutine") 
+print()  
+print("With my ",end="")
+difColor("purple", "new program ")
+print("i can just call 'red' ",end="") 
+difColor("red", "and ")
+print("that word will appear in that color i set it to with no ",end="")
+difColor("cyan", "weird gaps.")
+print()
+print("epic :)")
