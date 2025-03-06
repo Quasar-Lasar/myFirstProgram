@@ -1,0 +1,1 @@
+['Grenade', 'Pistol', 'Grenade', 'Shotgun', 'Grenade', 'Shotgun', 'Smg', 'Smg', 'Shotgun', 'Smg', 'Shotgun', 'Pistol', 'Shotgun', 'Shotgun', 'Pistol', 'Pistol', 'Smg', 'Magnum', 'Minigun']
