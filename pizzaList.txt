@@ -1,1 +1,0 @@
-[['Mike Tyson', 'pepperoni', 'M', 3, 28.5], ['Frank Bruno', 'ham and cheese', 'S', 2, 15.98], ['Chris Eubank', 'pinapple', 'M', 5, 47.5], ['Connor Mcgregor', 'american hot', 'S', 3, 23.97], ['Mani Paciou', 'four cheese', 'M', 2, 19.0], ['Chuck Liddel', 'diablo', 'L', 3, 33], ['Joe Rogan', 'salami', 'M', 3, 28.5]]
