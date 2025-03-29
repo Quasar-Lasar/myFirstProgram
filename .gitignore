@@ -135,8 +135,6 @@ venv/
 ENV/
 env.bak/
 venv.bak/
-
-# Credentials file
 creds.json
 
 # Spyder project settings
