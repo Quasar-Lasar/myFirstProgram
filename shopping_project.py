@@ -1,25 +1,24 @@
-from colorama import Fore
-import os
-os.system('cls')
-print("Shopping List Acumulator")
+import os, csv
+
 print()
-stew = {'diced beef(m)':1, 'carrots(v)':3, 'celery(v)':2, 'onion(v)':1, 'red wine(r)':1, 
- 'plain flour(r)':1, 'rosemary(s)':1, 'bay leaves(s)':1, 'suet(r)':1, 'self raising flour(r)':1,
- 'potatoes(v)':2}
-spagbol = {'mince(m)':1, 'tinned chopped tomatoes(r)':1, 'garlic(s)':4, 'mixed herbs(s)':1, 'worcestershire sauce(r)':1, 
- 'onion(v)':1, 'carrots(v)':1, 'spaghetti(r)':1, 'garlic bread(r)':1,}
-meatballs = {'meatballs(m)':1, 'tinned chopped tomatoes(r)':1, 'garlic(s)':4, 'mixed herbs(s)':1, 
- 'worcestershire sauce(r)':1, 'onion(v)':1, 'carrots(v)':1, 'spaghetti(r)':1, 'garlic bread(r)':1,}
-lasagne = {'mince(m)':1, 'tinned chopped tomatoes(r)':1, 'garlic(r)':4, 'oregano(s)':1, 'worcestershire sauce(r)':1, 
- 'onion(v)':1, 'carrots(v)':1, 'lasagne sheets(r)':1, 'bacon(m)':1}
-chicken_curry = {'chicken breasts(m)':2, 'tinned chopped tomatoes(r)':1, 'garam masala(s)':1, 'cumin(s)':1, 
- 'chillis(s)':1, 'tumeric(s)':1, 'onion(v)':1, 'garlic(v)':4, 'chilli powder(s)':1, 'rice(r)':1, 
- 'naan bread(r)':1, 'poppadoms(r)':1}
-chilli = {'mince(m)':1, 'tinned chopped tomatoes(r)':1, 'garlic(s)':4, 'kidney beans(r)':1, 'beef stock(s)':1, 
- 'cumin(s)':1, 'mild chilli powder(s)':1, 'paprika(s)':1, 'chillis(s)':1, 'mixed peppers(v)':1, 'onion(v)':1}
-cottage_pie = {'mince(m)':1, 'potatoes(v)':1, 'carrots':3, 'peas':1, 'onion(v)':1, 'beef stock':1,
- 'worcestershire sauce(r)':1, 'brown sauce(r)':1 }
-fajitas = {'chicken breasts(m)':1, 'onion(v)':1, 'mixed peppers(v)':1, 'fajiat mix(s)':1, 'tortillas(r)':1,}
+print("Shopping List Accumulator")
+print()
+
+def load_recipes_from_csv(file_path):
+    recipes = {}
+    with open(file_path, mode='r') as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            recipe = row['recipe']
+            ingredient = row['ingredient']
+            quantity = int(row['quantity'])
+            if recipe not in recipes:
+                recipes[recipe] = {}
+            recipes[recipe][ingredient] = quantity
+    return recipes
+
+recipes = load_recipes_from_csv('recipes.csv')
+
 def shopping_list_accumulator(*args):
     shopping_list = {}
     for recipe in args:
@@ -29,46 +28,38 @@ def shopping_list_accumulator(*args):
             else:
                 shopping_list[ingredient] = quantity
     return shopping_list
-    
-shopping_list = shopping_list_accumulator(stew, spagbol, meatballs, lasagne,
- chicken_curry, chilli, cottage_pie, fajitas)
-colors = [Fore.RED, Fore.GREEN, Fore.YELLOW, Fore.BLUE, Fore.MAGENTA, Fore.CYAN]
-for i, (ingredient, quantity) in enumerate(shopping_list.items()):
-    color = colors[i % len(colors)]
-    print(f"{color}{ingredient:<26}{quantity:>26}\033[0m")
-print()
-print("Happy Shopping!")
-print()
-print("Seperated isle sections to make life a lil easier :) ")
-print()
-search_text = "(m)"
-matching_keys ={key: value for key, value in shopping_list.items() if search_text in key}
-print("\t\033[31m Meat:\n")
-for i, (ingredient, quantity) in enumerate(matching_keys.items()):
-    print(f"{ingredient:<26}{quantity:>26}")
-print()
-print()
 
-search_text = "(v)"
-matching_keys ={key: value for key, value in shopping_list.items() if search_text in key}
-print("\t\033[32m Vegetables:\n")
-for i, (ingredient, quantity) in enumerate(matching_keys.items()):
-    print(f"{ingredient:<26}{quantity:>26}")
-print()
-print()
+def prettyPrint():
+    print("\nHappy Shopping!\n")
+    categories = [
+        ("(m)", "\033[31mMeat:"),
+        ("(v)", "\033[32mVegetables:"),
+        ("(s)", "\033[36mSpice:"),
+        ("(r)", "\033[35mRandom items:")
+    ]
+    for category, color_code in categories:
+        print(color_code)
+        print("====================================================")
+        matching_keys = {key: value for key, value in shopping_list.items() if category in key}
+        for ingredient, quantity in matching_keys.items():
+            print(f"{ingredient:<26}{quantity:>26}")
+        print("\033[0m")
 
-search_text = "(s)"
-matching_keys ={key: value for key, value in shopping_list.items() if search_text in key}
-print("\t\033[36m Spice:\n")
-for i, (ingredient, quantity) in enumerate(matching_keys.items()):
-    print(f"{ingredient:<26}{quantity:>26}")
-print()
-print()
+while True:
+    print("Available recipes:")
+    for recipe in recipes.keys():
+        print(f"- {recipe}")
 
-search_text = "(r)"
-matching_keys ={key: value for key, value in shopping_list.items() if search_text in key}
-print("\t\033[35m Random shit:\n")
-for i, (ingredient, quantity) in enumerate(matching_keys.items()):
-    print(f"{ingredient:<26}{quantity:>26}")
+    selected_meals = input("\nEnter the meals you want (comma-separated): ").lower().split(",")
+    selected_meals = [meal.strip() for meal in selected_meals if meal.strip() in recipes]
 
-print("\033[0m")
+    if not selected_meals:
+        print("\nNo valid meals selected, try again: ")
+        print()
+        continue
+        
+    selected_recipes = [recipes[meal] for meal in selected_meals]
+    shopping_list = shopping_list_accumulator(*selected_recipes)
+
+    prettyPrint()
+    break

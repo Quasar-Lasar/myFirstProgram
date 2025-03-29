@@ -1,0 +1,75 @@
+recipe,ingredient,quantity
+stew,diced beef(m),1
+stew,carrots(v),3
+stew,celery(v),2
+stew,onion(v),1
+stew,red wine(r),1
+stew,plain flour(r),1
+stew,rosemary(s),1
+stew,bay leaves(s),1
+stew,suet(r),1
+stew,self raising flour(r),1
+stew,potatoes(v),2
+spagbol,mince(m),1
+spagbol,tinned chopped tomatoes(r),1
+spagbol,garlic(s),4
+spagbol,mixed herbs(s),1
+spagbol,worcestershire sauce(r),1
+spagbol,onion(v),1
+spagbol,carrots(v),1
+spagbol,spaghetti(r),1
+spagbol,garlic bread(r),1
+meatballs,meatballs(m),1
+meatballs,tinned chopped tomatoes(r),1
+meatballs,garlic(s),4
+meatballs,mixed herbs(s),1
+meatballs,worcestershire sauce(r),1
+meatballs,onion(v),1
+meatballs,carrots(v),1
+meatballs,spaghetti(r),1
+meatballs,garlic bread(r),1
+lasagne,mince(m),1
+lasagne,tinned chopped tomatoes(r),1
+lasagne,garlic(r),4
+lasagne,oregano(s),1
+lasagne,worcestershire sauce(r),1
+lasagne,onion(v),1
+lasagne,carrots(v),1
+lasagne,lasagne sheets(r),1
+lasagne,bacon(m),1
+chicken_curry,chicken breasts(m),2
+chicken_curry,tinned chopped tomatoes(r),1
+chicken_curry,garam masala(s),1
+chicken_curry,cumin(s),1
+chicken_curry,chillis(s),1
+chicken_curry,tumeric(s),1
+chicken_curry,onion(v),1
+chicken_curry,garlic(v),4
+chicken_curry,chilli powder(s),1
+chicken_curry,rice(r),1
+chicken_curry,naan bread(r),1
+chicken_curry,poppadoms(r),1
+chilli,mince(m),1
+chilli,tinned chopped tomatoes(r),1
+chilli,garlic(s),4
+chilli,kidney beans(r),1
+chilli,beef stock(s),1
+chilli,cumin(s),1
+chilli,mild chilli powder(s),1
+chilli,paprika(s),1
+chilli,chillis(s),1
+chilli,mixed peppers(v),1
+chilli,onion(v),1
+cottage_pie,mince(m),1
+cottage_pie,potatoes(v),1
+cottage_pie,carrots,3
+cottage_pie,peas,1
+cottage_pie,onion(v),1
+cottage_pie,beef stock,1
+cottage_pie,worcestershire sauce(r),1
+cottage_pie,brown sauce(r),1
+fajitas,chicken breasts(m),1
+fajitas,onion(v),1
+fajitas,mixed peppers(v),1
+fajitas,fajiat mix(s),1
+fajitas,tortillas(r),1
