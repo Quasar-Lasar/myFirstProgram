@@ -19,8 +19,13 @@ def hash_password(password):
 
 def new_user():
     username = input("Create Username: ")
-    password = input("Create Password: ")
     credentials = load_credentials()
+
+    if username in credentials:
+        print("Username already exists. Please choose a different username.")
+        return
+
+    password = input("Create Password: ")
     credentials[username] = hash_password(password)
     save_credentials(credentials)
     print("User created successfully")
