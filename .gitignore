@@ -4,6 +4,7 @@ __pycache__/
 *$py.class
 
 # My ignores
+myFirstProgram/
 creds.json
 
 # C extensions
