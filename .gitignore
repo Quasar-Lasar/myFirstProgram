@@ -3,8 +3,11 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+<<<<<<< HEAD
 creds.json
 
+=======
+>>>>>>> 9476811e2d89d876b2fc8e5fde2c6bccdba0e171
 # C extensions
 *.so
 
