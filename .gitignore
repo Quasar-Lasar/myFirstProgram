@@ -3,11 +3,6 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# My ignores
-myFirstProgram/
-creds
-*.json
-
 # C extensions
 *.so
 
