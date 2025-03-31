@@ -2,7 +2,7 @@ import hashlib
 import json
 import os
 
-CREDENTIALS_FILE = "creds.json"
+CREDENTIALS_FILE = "creds/creds.json"
 
 def load_credentials():
     if os.path.exists(CREDENTIALS_FILE):
