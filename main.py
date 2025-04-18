@@ -1,56 +1,85 @@
-import hashlib
-import json
-import os
+import tkinter as tk
 
-CREDENTIALS_FILE = "creds/creds.json"
+window = tk.Tk()
+window.title("Graphic Novel")
+window.geometry("960x540")
 
-def load_credentials():
-    if os.path.exists(CREDENTIALS_FILE):
-        with open(CREDENTIALS_FILE, "r") as f:
-            return json.load(f)
-    return {}
+shotsFired = 0
 
-def save_credentials(credentials):
-    with open(CREDENTIALS_FILE, "w") as f:
-        json.dump(credentials, f)
+def shotCounter():
+    global shotsFired 
+    shotsFired += 1
+    blabel["text"] = f"PEW  "*shotsFired
+    blabel.pack()
+    if shotsFired == 5:
+        shotsFired = 0
+        blabel.pack_forget()
+        bossDead()
 
-def hash_password(password):
-    return hashlib.sha256(password.encode()).hexdigest()
+def openDoor():
+    buttonTwo.pack()
+    button.pack_forget()
+    buttonOne.pack_forget()
+    canvas.itemconfig(container,image=bImage)
+    label["text"] = f"Shoot to kill the boss"
+    blabel.pack_forget()
 
-def new_user():
-    username = input("Create Username: ")
-    credentials = load_credentials()
+def goBack():
+    button.pack_forget()
+    buttonOne.pack_forget()
+    canvas.itemconfig(container,image=lImage)
+    label["text"] = f"You have left the castle, The nazi's won the war!!!"
+    blabel.pack_forget()
+    buttonThree.pack()
 
-    if username in credentials:
-        print("Username already exists. Please choose a different username.")
-        return
+def bossDead():
+    canvas.itemconfig(container,image=dImage)
+    buttonTwo.pack_forget()
+    buttonFour.pack()
+    label["text"] = f"You killed the boss"
 
-    password = input("Create Password: ")
-    credentials[username] = hash_password(password)
-    save_credentials(credentials)
-    print("User created successfully")
+def finish():
+    canvas.itemconfig(container,image=tImage)
+    buttonTwo.pack_forget()
+    label["text"] = f"YOU KILLED THE BOSS AND FOUND THE TREASURE"
+    buttonFour.pack_forget()
+    buttonThree.pack()
 
-def sign_in():
-    username = input("Username: ")
-    password = input("Password: ")
-    credentials = load_credentials()
-    if credentials.get(username) == hash_password(password):
-        print("You are now logged in")
-    else:
-        print("Invalid username or password")
+def restart():
+    label["text"] = f"You are inside castle wolfenstein. Choose wisely which way you go 🫡"
+    canvas.itemconfig(container,image=stImage)
+    buttonThree.pack_forget()
+    button.pack()
+    buttonOne.pack()
+    blabel["text"] = f"Which way do you want to go"
+    
+label = tk.Label(text= f"You are inside castle wolfenstein. Choose wisely which way you go 🫡")
+label.pack()
 
-def main():
-    while True:
-        choice = input("1. New user\n2. Login\nType any other key to exit\n>>> ")
-        if choice == '1':
-            new_user()
-        elif choice == '2':
-            sign_in()
-        else:
-            break
+canvas = tk.Canvas(window, width=820, height=505)
+canvas.pack()
 
-if __name__ == "__main__":
-    main()
+blabel = tk.Label(text= f"Which way do you want to go")
+blabel.pack()
 
-# i need a file called cred.json for this program to work. Example of dictionary
-# {"test_str": "b9dd960c1753459a78115d3cb845a57d924b6877e805b08bd01086ccdf34433c"}
+button = tk.Button(text="Open the door",command=openDoor )
+button.pack()
+buttonOne = tk.Button(text="Go back",command=goBack)
+buttonOne.pack()
+buttonTwo = tk.Button(text="Shoot for your life",command=shotCounter)
+buttonThree = tk.Button(text="Restart",command=restart)
+buttonFour = tk.Button(text="Continue",command=finish)
+
+stImage = tk.PhotoImage(file="pics/wolfStart.png")
+stImage = stImage.subsample(1)
+bImage = tk.PhotoImage(file="pics/wolfBoss.png")
+bImage = bImage.subsample(1)
+dImage = tk.PhotoImage(file="pics/wolfDead.png")
+dImage = dImage.subsample(1)
+tImage = tk.PhotoImage(file="pics/wolfTreasure.png")
+tImage = tImage.subsample(1)
+lImage = tk.PhotoImage(file="pics/wolfLift.png")
+lImage = lImage.subsample(1)
+container = canvas.create_image(410,260,image= stImage)
+
+tk.mainloop()
