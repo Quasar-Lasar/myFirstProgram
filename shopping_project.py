@@ -34,8 +34,9 @@ def prettyPrint():
     categories = [
         ("(m)", "\033[31mMeat:"),
         ("(v)", "\033[32mVegetables:"),
-        ("(s)", "\033[36mSpice:"),
-        ("(r)", "\033[35mRandom items:")
+        ("(s)", "\033[36mSauce:"),
+        ("(r)", "\033[35mRandom items:"),
+        ("(sp)", "\033[34mSpice:")
     ]
     for category, color_code in categories:
         print(color_code)

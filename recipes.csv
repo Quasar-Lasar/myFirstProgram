@@ -5,71 +5,172 @@ stew,celery(v),2
 stew,onion(v),1
 stew,red wine(r),1
 stew,plain flour(r),1
-stew,rosemary(s),1
-stew,bay leaves(s),1
+stew,rosemary(sp),1
+stew,bay leaves(sp),1
 stew,suet(r),1
 stew,self raising flour(r),1
+stew,garlic(v),4
 stew,potatoes(v),2
 spagbol,mince(m),1
 spagbol,tinned chopped tomatoes(r),1
-spagbol,garlic(s),4
-spagbol,mixed herbs(s),1
-spagbol,worcestershire sauce(r),1
+spagbol,garlic(v),4
+spagbol,mixed herbs(sp),1
+spagbol,worcestershire sauce(s),1
 spagbol,onion(v),1
 spagbol,carrots(v),1
 spagbol,spaghetti(r),1
 spagbol,garlic bread(r),1
 meatballs,meatballs(m),1
 meatballs,tinned chopped tomatoes(r),1
-meatballs,garlic(s),4
-meatballs,mixed herbs(s),1
-meatballs,worcestershire sauce(r),1
+meatballs,garlic(v),4
+meatballs,mixed herbs(sp),1
+meatballs,worcestershire sauce(s),1
 meatballs,onion(v),1
 meatballs,carrots(v),1
 meatballs,spaghetti(r),1
 meatballs,garlic bread(r),1
 lasagne,mince(m),1
 lasagne,tinned chopped tomatoes(r),1
-lasagne,garlic(r),4
-lasagne,oregano(s),1
-lasagne,worcestershire sauce(r),1
+lasagne,garlic(v),4
+lasagne,oregano(sp),1
+lasagne,worcestershire sauce(s),1
 lasagne,onion(v),1
 lasagne,carrots(v),1
 lasagne,lasagne sheets(r),1
 lasagne,bacon(m),1
 chicken_curry,chicken breasts(m),2
 chicken_curry,tinned chopped tomatoes(r),1
-chicken_curry,garam masala(s),1
-chicken_curry,cumin(s),1
-chicken_curry,chillis(s),1
-chicken_curry,tumeric(s),1
+chicken_curry,garam masala(sp),1
+chicken_curry,cumin(sp),1
+chicken_curry,fresh chillis(v),1
+chicken_curry,tumeric(sp),1
 chicken_curry,onion(v),1
 chicken_curry,garlic(v),4
-chicken_curry,chilli powder(s),1
+chicken_curry,chilli powder(sp),1
 chicken_curry,rice(r),1
 chicken_curry,naan bread(r),1
 chicken_curry,poppadoms(r),1
 chilli,mince(m),1
 chilli,tinned chopped tomatoes(r),1
-chilli,garlic(s),4
+chilli,garlic(v),4
 chilli,kidney beans(r),1
-chilli,beef stock(s),1
-chilli,cumin(s),1
-chilli,mild chilli powder(s),1
-chilli,paprika(s),1
-chilli,chillis(s),1
-chilli,mixed peppers(v),1
+chilli,beef stock(r),1
+chilli,cumin(sp),1
+chilli,mild chilli powder(sp),1
+chilli,paprika(sp),1
+chilli,fresh chillis(v),1
+chilli,mixed peppers(v),2
 chilli,onion(v),1
 cottage_pie,mince(m),1
 cottage_pie,potatoes(v),1
-cottage_pie,carrots,3
-cottage_pie,peas,1
+cottage_pie,carrots(v),3
+cottage_pie,mixed herbs(sp),1
+cottage_pie,peas(v),1
 cottage_pie,onion(v),1
-cottage_pie,beef stock,1
-cottage_pie,worcestershire sauce(r),1
-cottage_pie,brown sauce(r),1
+cottage_pie,gravy granuels(sp),1
+cottage_pie,beef stock(r),1
+cottage_pie,worcestershire sauce(s),1
+cottage_pie,brown sauce(s),1
 fajitas,chicken breasts(m),1
 fajitas,onion(v),1
-fajitas,mixed peppers(v),1
-fajitas,fajiat mix(s),1
+fajitas,cucumber(v),1
+fajitas,mixed peppers(v),3
+fajitas,fajitas mix(sp),1
 fajitas,tortillas(r),1
+fajitas,rice(r),1
+mag_chicken,chicken breasts(m),3
+mag_chicken,maggie chicken packet(sp),1
+mag_chicken,broccoli(v),1
+mag_chicken,rice(r),3
+steak,mushrooms(v),1
+steak,fillet steak(m),2
+steak,tomatoes(v),1
+steak,green beans(v),1
+steak,peppercorn sauce(sp),1
+steak,milk(r),1
+steak,garlic(v),3
+steak,chips(r),1
+steak,onion rings(r),1
+steak,fresh chillis(v),1
+toad_in_the_hole,sausages(m),1
+toad_in_the_hole,peas(v),1
+toad_in_the_hole,plain flour(r),1
+toad_in_the_hole,eggs(r),1
+toad_in_the_hole,milk(r),1
+toad_in_the_hole,gravy granuels(sp),1
+toad_in_the_hole,onions(v),1
+toad_in_the_hole,potatoes(v),8
+pizza,strong white flour(r),1
+pizza,yeast(r),1
+pizza,tinned chopped tomatoes(r),1
+pizza,garlic(v),3
+pizza,worcestershire sauce(s),1
+pizza,tomatoe puree(s),1
+pizza,mixed herbs(sp),1
+pizza,cheese(r),1
+pizza,mozarella(r),1
+pizza,pepperoni(m),1
+pizza,basil(sp),1
+pizza,hot dogs(m),1
+chow_mein,dark soy sauce(s),1
+chow_mein,light soy sauce(s),1
+chow_mein,noodles(r),1
+chow_mein,oyster sauce(s),1
+chow_mein,carrots(v),3
+chow_mein,spring onion(v),1
+chow_mein,chicken breasts(m),3
+green_curry,coconut milk(s),1
+green_curry,green thai paste(s),1
+green_curry,onion(v),1
+green_curry,mangetout(v),1
+green_curry,chicken breasts(m),3
+green_curry,green beans(v),1
+bangers_mash,sausages(m),1
+bangers_mash,gravy granuels(sp),1
+bangers_mash,onion(v),1
+bangers_mash,potatoes(v),8
+bangers_mash,peas(v),1
+paprika_chicken,potatoes(v),6
+paprika_chicken,chicken breasts(m),3
+paprika_chicken,paprika(sp),1
+paprika_chicken,carrots(v),3
+paprika_chicken,red pepper(v),1
+paprika_chicken,chicken gravy granuels(sp),1
+tacos,taco mix(sp),1
+tacos,mince(m),1
+tacos,onion(v),1
+tacos,jalepenos(r),1
+tacos,green pepper(v),1
+tacos,taco shells(r),1
+tacos,tortillas(r),1
+tacos,cheese(r),1
+tacos,sour cream(s),1
+tacos,avocado(v),1
+tacos,salad(v),1
+enchiladas,enchiladas kit(r),1
+enchiladas,cheese(r),1
+enchiladas,chicken breasts(m),3
+enchiladas,cucumber(v),1
+enchiladas,rice(r),1
+ham_salad ,ham(m),1
+ham_salad ,baby potatoes(v),1
+ham_salad ,salad(v),1
+ham_salad ,cheese(r),1
+ham_salad ,cous cous(r),1
+ham_salad ,red pepper(v),1
+ham_salad ,vegetable stock(r),1
+ham_salad ,avocado(v),1
+ham_salad ,eggs(r),1
+ham_salad ,pesto pasta & pine nuts®,1
+chicken_pie,potatoes(v),8
+chicken_pie,chicken breasts(m),3
+chicken_pie,puff pastry(r),1
+chicken_pie,chicken stock(r),1
+chicken_pie,lurpak(r),1
+chicken_pie,plain flour(r),1
+chicken_pie,milk(r),1
+chicken_pie,paprika(sp),1
+chicken_pie,bacon(m),1
+chicken_pie,broccoli(v),1
+chicken_pie,leeks(v),1
+chicken_pie,garlic(v),4
