@@ -71,7 +71,7 @@ cottage_pie,gravy granuels(sp),1
 cottage_pie,beef stock(r),1
 cottage_pie,worcestershire sauce(s),1
 cottage_pie,brown sauce(s),1
-fajitas,chicken breasts(m),1
+fajitas,chicken breasts(m),3
 fajitas,onion(v),1
 fajitas,cucumber(v),1
 fajitas,mixed peppers(v),3
@@ -152,16 +152,16 @@ enchiladas,cheese(r),1
 enchiladas,chicken breasts(m),3
 enchiladas,cucumber(v),1
 enchiladas,rice(r),1
-ham_salad ,ham(m),1
-ham_salad ,baby potatoes(v),1
-ham_salad ,salad(v),1
-ham_salad ,cheese(r),1
-ham_salad ,cous cous(r),1
-ham_salad ,red pepper(v),1
-ham_salad ,vegetable stock(r),1
-ham_salad ,avocado(v),1
-ham_salad ,eggs(r),1
-ham_salad ,pesto pasta & pine nuts®,1
+ham_salad,ham(m),1
+ham_salad,baby potatoes(v),1
+ham_salad,salad(v),1
+ham_salad,cheese(r),1
+ham_salad,cous cous(r),1
+ham_salad,red pepper(v),1
+ham_salad,vegetable stock(r),1
+ham_salad,avocado(v),1
+ham_salad,eggs(r),1
+ham_salad,pesto pasta & pine nuts(r),1
 chicken_pie,potatoes(v),8
 chicken_pie,chicken breasts(m),3
 chicken_pie,puff pastry(r),1

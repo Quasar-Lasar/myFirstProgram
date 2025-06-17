@@ -51,12 +51,15 @@ while True:
     for recipe in recipes.keys():
         print(f"- {recipe}")
 
-    selected_meals = input("\nEnter the meals you want (comma-separated): ").lower().split(",")
-    selected_meals = [meal.strip() for meal in selected_meals if meal.strip() in recipes]
+    selected_meals_input = input("\nEnter the meals you want (comma-separated): ").lower().split(",") 
+    selected_meals = [meal.strip() for meal in selected_meals_input if meal.strip() in recipes]
+    invalid_meals = [meal.strip() for meal in selected_meals_input if meal.strip() and meal.strip() not in recipes]
+
+    if invalid_meals:
+        print(f"\nI don't recognize these meals: {', '.join(invalid_meals)}\n")
 
     if not selected_meals:
-        print("\nNo valid meals selected, try again: ")
-        print()
+        print("No valid meals selected, try again:\n")
         continue
         
     selected_recipes = [recipes[meal] for meal in selected_meals]
